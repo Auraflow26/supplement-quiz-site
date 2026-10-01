@@ -18,7 +18,26 @@ Known drop-off point: users who start the quiz but leave when an email is reques
 - [Product brief](docs/product.md)
 - [User personas](docs/personas.md)
 - [Backlog & sprint plan](docs/backlog.md)
+- [Demo store design spec](docs/specs/2026-10-01-demo-store-design.md)
 
-## Status
+## Tech
 
-Project setup. Tech stack not chosen yet.
+Next.js on Vercel · Supabase (accounts + data) · Resend (email, optional) · Vercel Analytics. Demo store: no payments are processed.
+
+## Run locally
+
+```bash
+npm install
+npx vercel link            # project: supplemeant
+npx vercel env pull .env.local
+npm run dev
+```
+
+Database schema: [supabase/migrations](supabase/migrations).
+
+## Tests
+
+```bash
+npm test          # blend logic (personas → expected blends)
+npm run e2e       # browser test: sign up → quiz → blend → checkout → order (needs dev server on :3100)
+```

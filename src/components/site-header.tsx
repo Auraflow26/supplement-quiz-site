@@ -9,7 +9,7 @@ export async function SiteHeader() {
     <header className="border-b border-espresso/10">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <Logo />
-        <nav className="flex items-center gap-1 text-sm font-medium sm:gap-4" aria-label="Main">
+        <nav className="flex items-center gap-1 whitespace-nowrap text-sm font-medium sm:gap-4" aria-label="Main">
           <Link href="/#how" className="hidden rounded-full px-3 py-2 hover:bg-latte sm:inline">
             How it works
           </Link>
@@ -30,7 +30,7 @@ export async function SiteHeader() {
               Log in
             </Link>
           )}
-          <Link href="/quiz" className="btn-primary px-4 py-2 text-sm">
+          <Link href="/quiz" className="btn-primary hidden px-4 py-2 text-sm sm:inline-flex">
             Take the quiz
           </Link>
         </nav>

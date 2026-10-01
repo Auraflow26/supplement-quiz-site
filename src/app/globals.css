@@ -19,26 +19,30 @@ body {
   color: var(--color-espresso);
 }
 
-@layer components {
-  .btn {
+@utility btn {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta disabled:cursor-not-allowed disabled:opacity-50;
-  }
-  .btn-primary {
+}
+
+@utility btn-primary {
     @apply btn bg-terracotta text-foam hover:bg-terracotta-dark;
-  }
-  .btn-secondary {
+}
+
+@utility btn-secondary {
     @apply btn border border-espresso/20 bg-foam text-espresso hover:bg-latte;
-  }
-  .card {
+}
+
+@utility card {
     @apply rounded-3xl border border-espresso/10 bg-foam p-6 shadow-[0_1px_0_rgba(59,42,32,0.04)];
-  }
-  .input {
+}
+
+@utility input {
     @apply w-full rounded-xl border border-espresso/20 bg-foam px-4 py-3 text-base text-espresso placeholder:text-mocha/50 focus:border-terracotta focus:outline-none focus:ring-2 focus:ring-terracotta/20 aria-invalid:border-red-700;
-  }
-  .label {
+}
+
+@utility label {
     @apply mb-1.5 block text-sm font-medium text-mocha;
-  }
-  .eyebrow {
+}
+
+@utility eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.18em] text-terracotta;
-  }
 }
