@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-cream: #f6efe6;
+  --color-latte: #eadbc8;
+  --color-foam: #fbf7f2;
+  --color-espresso: #3b2a20;
+  --color-mocha: #6b4f3f;
+  --color-terracotta: #c2562f;
+  --color-terracotta-dark: #a4441f;
+  --color-sage: #7c8b6f;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-espresso);
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-terracotta text-foam hover:bg-terracotta-dark;
+  }
+  .btn-secondary {
+    @apply btn border border-espresso/20 bg-foam text-espresso hover:bg-latte;
+  }
+  .card {
+    @apply rounded-3xl border border-espresso/10 bg-foam p-6 shadow-[0_1px_0_rgba(59,42,32,0.04)];
+  }
+  .input {
+    @apply w-full rounded-xl border border-espresso/20 bg-foam px-4 py-3 text-base text-espresso placeholder:text-mocha/50 focus:border-terracotta focus:outline-none focus:ring-2 focus:ring-terracotta/20 aria-invalid:border-red-700;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-mocha;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-terracotta;
+  }
 }
