@@ -1,6 +1,6 @@
 # Supple-MEANT
 website link: https://supplemeant.vercel.app/
-
+phone App link: https://supplemeant.vercel.app/app
 
 **Personalized supplements in your drink — "Supple-MEANT for you!"**
 
