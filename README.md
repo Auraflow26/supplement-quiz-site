@@ -14,6 +14,7 @@ Known drop-off point: users who start the quiz but leave when an email is reques
 ## Docs
 
 - [User personas](docs/personas.md)
+- [Backlog & sprint plan](docs/backlog.md)
 
 ## Status
 
