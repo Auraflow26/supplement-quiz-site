@@ -1,6 +1,8 @@
-# Supplement Quiz Site
+# Supple-MEANT
 
-Website for personalized supplements. Visitors take a short quiz (daily routine, habits, wellness concerns, demographics), pick a product form (coffee creamer, liposomal drops, or protein shake), and order supplements made for them.
+**Personalized supplements in your drink — "Supple-MEANT for you!"**
+
+Website for a personalized, supplement-fortified coffee creamer. Visitors take a short quiz (daily routine, habits, wellness concerns, demographics), pick a product form (coffee creamer, liposomal drops, or protein shake), and order supplements made for them.
 
 ## Core user flow
 
@@ -13,6 +15,7 @@ Known drop-off point: users who start the quiz but leave when an email is reques
 
 ## Docs
 
+- [Product brief](docs/product.md)
 - [User personas](docs/personas.md)
 - [Backlog & sprint plan](docs/backlog.md)
 
