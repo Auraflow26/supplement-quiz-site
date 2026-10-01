@@ -14,6 +14,7 @@ export function SiteFooter() {
           <Link href="/#products" className="hover:text-terracotta">Products</Link>
           <Link href="/#faq" className="hover:text-terracotta">FAQ</Link>
           <Link href="/account" className="hover:text-terracotta">My account</Link>
+          <Link href="/app" className="hover:text-terracotta">Get the app</Link>
         </nav>
         <p className="text-xs leading-relaxed text-mocha">
           These statements have not been evaluated by the Food and Drug Administration. This product is not intended to

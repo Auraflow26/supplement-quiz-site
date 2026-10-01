@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Only when launched from the home screen as an installed app. */
+@custom-variant standalone (@media (display-mode: standalone));
+
 @theme {
   --color-cream: #f6efe6;
   --color-latte: #eadbc8;
@@ -17,6 +20,16 @@
 body {
   background: var(--color-cream);
   color: var(--color-espresso);
+  padding-top: env(safe-area-inset-top);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (display-mode: standalone) {
+  /* Room for the bottom tab bar plus the iPhone home indicator. */
+  body {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+    overscroll-behavior-y: none;
+  }
 }
 
 @utility btn {
